@@ -11,7 +11,7 @@ const callback1 = () => {
     x += 'ri';
     log('cb 1:', x);
 };
-setTimeout(callback1, _);
+setTimeout(callback1, 1000); // Callback 1 after 1000 milliseconds
 
 x += 'j';
 log(x);
@@ -21,7 +21,7 @@ const callback2 = () => {
     log('cb 2:', test);
     console.assert(test, 'x should be "javascript"');
 };
-setTimeout(callback2, _);
+setTimeout(callback2, 2000); // Callback 2 after 2000 milliseconds
 
 x += 'a';
 log(x);
@@ -30,7 +30,7 @@ const callback3 = () => {
     x += 'sc';
     log('cb 3:', x);
 };
-setTimeout(callback3, _);
+setTimeout(callback3, 3000); // Callback 3 after 3000 milliseconds
 
 x += 'v';
 log(x);
@@ -39,7 +39,7 @@ const callback4 = () => {
     x += 'pt';
     log('cb 4:', x);
 };
-setTimeout(callback4, _);
+setTimeout(callback4, 4000); // Callback 4 after 4000 milliseconds
 
 x += 'a';
 log(x);

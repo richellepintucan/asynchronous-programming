@@ -5,9 +5,9 @@ const { log } = labeledLogger();
 // sort the array into `sorted` using side-effects
 const sortArray = (unsorted, sorted) => {
     // iterate through each item in the unsorted array
-    //  for each item creat a timeout
-    //    in the timeout callback, push the item into `sorted`
-    //    the timeout should delay for item.charCodeAt()
+    // for each item create a timeout
+    // in the timeout callback, push the item into `sorted`
+    // the timeout should delay for item.charCodeAt()
 };
 
 // can you figure out why the tests pass in the order they do?
@@ -54,3 +54,15 @@ sortArray(toSort5, actual5);
 testSortAsync(actual5, expected5, 'Test 5');
 
 log('= = = =  the call stack is empty  = = = =');
+
+// Answer
+
+const sortArray = (unsorted, sorted) => {
+    unsorted.forEach(item => {
+        setTimeout(() => {
+            sorted.push(item);
+            sorted.sort(); // Perform sorting operation after each item is pushed
+        }, item.charCodeAt());
+    });
+};
+

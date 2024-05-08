@@ -10,34 +10,25 @@ const exercise3_cb_1 = () => {
     x += 'a';
     log('cb 1:', x);
 };
-const intervalId = setInterval(exercise3_cb_1, _);
+const intervalId = setInterval(exercise3_cb_1, 200); // Blank 1: Set interval to 200ms
 
 const exercise3_cb_2 = () => {
     x += 'w';
     log('cb 2:', x);
 };
-setTimeout(exercise3_cb_2, _);
+setTimeout(exercise3_cb_2, 50); // Blank 2: Set timeout to 50ms
 
 const exercise3_cb_3 = () => {
     const test = x === 'whaaaa!';
     log('cb 3:', test);
     console.assert(test, 'x should be "whaaaa!');
 };
-setTimeout(exercise3_cb_3, _);
+setTimeout(exercise3_cb_3, 100); // Blank 3: Set timeout to 100ms
 
 const exercise3_cb_4 = () => {
-    _; // clear something
+    clearInterval(intervalId); // Blank 4: Clear the interval
     x += '!';
     log('cb 4:', x);
 };
-setTimeout(exercise3_cb_4, _);
+setTimeout(exercise3)
 
-const exercise3_cb_5 = () => {
-    x += 'h';
-    log('cb 5:', x);
-};
-setTimeout(exercise3_cb_5, _);
-
-log(x);
-
-log('= = = =  the call stack is empty  = = = =');
